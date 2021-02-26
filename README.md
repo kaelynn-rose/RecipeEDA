@@ -12,14 +12,19 @@ The World Health Organization recommends that [1]:
 * Salt intake should be less than 5g per day
 
 
-### Process
+### CRISP-DM Process
 
-Business understanding – 
-Data understanding – 
-Data preparation –
-Modeling – 
-Evaluation – 
-Deployment – 
+Business understanding – A business centered on healthy eating and recipes could use this data to increase how they prioritize nutrition in their own recipes and see what recipe features result in higher user engagement.
+
+Data understanding – This dataset provides data from over 38,000 recipes on the largest and most viewed recipe website (Allrecipes.com)
+
+Data preparation – Data was cleaned to remove null values and reformatted to be easy to use. 
+
+Modeling – Exploratory data analysis and hypothesis testing was applied to see whether recipes meet nutrition guidelines and whether recipe category affects nutrition.
+
+Evaluation – The hypothesis testing would best serve a company's business goals by allowing them to compare which types of recipes influence different nutritional components.
+
+Deployment – The hypothesis testing could be implemented in a tool for users to see where their recipe scores in various nutritional areas, helping them make healthy dietary choices and improving user engagement.
 
 
 ## Data Preparation
@@ -41,7 +46,6 @@ Information in columns includes:
 * ingredients
 * recipe instructions
 * recipe categories
-* author name
 * recipe reviews and ratings
 * nutrition (per serving calories, fat, protein, sugar, fiber, etc.)
 * nlp sentiment data from Allrecipes.com
@@ -109,20 +113,23 @@ Hypothesis testing was conducted to determine whether the category of the recipe
 #### Example Hypothesis
 
 H0: That recipe category does not influence the saturated fat calories to total calories ratio.
-HA: That the recipes in the 'Dessert' category will have a different saturated fat calories to total calories ratio than the 'Main Dish' category.
+HA: That the recipes in the 'European' category will have a different saturated fat calories to total calories ratio than the 'Asian' category.
 
 Test: A two-tailed t-test was chosen, since we are interested in both ends of the distribution.
 Alpha: A significance level of 0.05 was chosen for this test, since this is generally standard and the outcome of this hypothesis testing is not 
 
-![plot](./figures/hypothesis1.png) 
+![plot](./figures/hypothesis2.png)  
 
-For this hypothesis test, the t-statistic is 16.417905633524033, and the p value is 2.1130871989165067e-59.
-Since the p-value is less than the significance level 0.05, we can reject the null hypothesis that recipe category does not affect the saturated fat calories to total calories ratio. 
+Asian recipe category: mean 0.145, variance 0.014
+European recipe category: mean 0.178, variance 0.009
+
+For this hypothesis test, the t-statistic is -7.6434898260482935, and the p value is 3.241899360589286e-14.
+Since the p-value is less than the significance level 0.05, we can reject the null hypothesis that recipe category for these categories does not affect the saturated fat calories to total calories ratio. 
 
 
 ## Conclusions
 
-The recipes scraped from Allrecipes.com show some trends in nutrition and dietary keywords over time. Overall, the average cholesterol, sodium, and fiber in recipes is increasing, while sugar content is declining. Recipe description keywords such as 'healthy', 'vegetarian', and 'vegan' have increased over time, while 'gluten-free', 'paleo', and 'keto' had sharp peaks in usage but are on the decline. The average macronutrient to calorie ratio across all recipes in the dataset is higher in total fat content than the recommended daily values (45.1% to 30% recommended), the protein content is lower than recommended (16.2% to 20% recommended), and the carbohydrate content is lower than recommended (38.7% to 50% recommended). To get the recommended macronutrients, a site content consumer would want to seek out recipes with lower fat content. Additionally, sugar, sodium, and saturated fat percentages were higher than recommended, while fiber was less than the recommended value. 
+The recipes scraped from Allrecipes.com show some trends in nutrition and dietary keywords over time. Overall, the average cholesterol, sodium, and fiber in recipes is increasing, while sugar content is declining. Recipe description keywords such as 'healthy', 'vegetarian', and 'vegan' have increased over time, while 'gluten-free', 'paleo', and 'keto' had sharp peaks in usage indicating that they were popular fad diets. The average macronutrient to calorie ratio across all recipes in the dataset is higher in total fat content than the recommended daily values (45.1% to 30% recommended), the protein content is lower than recommended (16.2% to 20% recommended), and the carbohydrate content is lower than recommended (38.7% to 50% recommended). Additionally, sugar, sodium, and saturated fat percentages were higher than recommended, while fiber was less than the recommended value. To get the recommended daily nutrients, a site content consumer would want to seek out recipes with lower fat and saturated fat content, lower sugar, and higher fiber. 
 
 ## References
 
