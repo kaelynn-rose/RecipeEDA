@@ -1,4 +1,4 @@
-# Health Trend Analysis of Recipe Pages From Allrecipes.com
+# Health Trend Analysis of Recipe Pages From Allrecipes.com 
 
 ## Introduction
 
