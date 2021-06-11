@@ -90,7 +90,7 @@ In addition to macronutrients, other nutritional values were analyzed. Since ser
 
 The recipes in this dataset are grouped into 1,170 unique categories. Categories of recipes for each year of the dataset were calculated and compiled into a csv file to create a bar chart 'race' animation to depict the prevalence of the top categories over time.
 
-The bar chart race animation created using this data can be found here: https://public.flourish.studio/visualisation/5380666/
+The **bar chart race animation** created using this data can be found here: https://public.flourish.studio/visualisation/5380666/
 
 The top 10 categories of recipes overall were: 
 
