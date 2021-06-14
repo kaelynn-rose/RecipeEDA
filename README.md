@@ -9,7 +9,7 @@ The World Health Organization recommends that [1]:
 * Total fat should not exceed 30% of total daily calorie intake
 * Saturated fats should not exceed 10% of total daily calorie intake 
 * Added sugars should not exceed 10% of total daily calorie intake, while 5% is suggested for additional health benefit
-* Salt intake should be less than 5g per day
+* Salt intake should be less than 5 g per day
 
 
 ### CRISP-DM Process
